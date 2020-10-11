@@ -92,7 +92,15 @@ function getForecast(searchValue){
 
           for (var i = 0; i <data.list.length; i++){
 
-            //forecasts 
+            //forecasts at 3pm
+            if (data.list[i].dt_txt.indexOf("15:00:00)") !== -1){
+
+                //html for card
+                var colEl = document.createElement("div");
+                colEl.classList.add("col-md-2");
+                var cardEl = document.createElement("div");
+                cardEl.classList.add("card", "bg-primary", "text-white");
+            }
           }
       })
 }

@@ -21,6 +21,9 @@ process
 1) set up the index file with what i'd need and how i want it structured
 2) created index file with triggers and pulls from bootstrap to call into java
 3) testing call -failled not using HTTP, retrying keys
+4) keys seem okay trying again
+5) create forecast loops and hourly checks
+6) checking on validiy of cards
 
 
 ---------
