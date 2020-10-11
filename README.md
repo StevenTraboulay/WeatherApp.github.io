@@ -19,6 +19,8 @@ process
 -------
 
 1) set up the index file with what i'd need and how i want it structured
+2) created index file with triggers and pulls from bootstrap to call into java
+3) testing call -failled not using HTTP, retrying keys
 
 
 ---------
@@ -26,3 +28,5 @@ keys and info
 -------
 
 API key f9536bc7a9491fe897bd179cb356d42a
+
+full fetch API: fetch("api.openweathermap.org/data/2.5/weather?q=" + searchValue + "&appid=f9536bc7a9491fe897bd179cb356d42a&units=metric"
