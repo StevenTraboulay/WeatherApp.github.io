@@ -42,11 +42,6 @@ full fetch API: fetch("api.openweathermap.org/data/2.5/weather?q=" + searchValue
 screenshot
 -----
 
-i was asked to add a screenshot but everytime i tried it seems to break link
-
-if suggestions could be provided i would apprciate it. 
-
-screenshot added to images folder
 
 ![Alt text](/assets/images/weatherscreenshot.png "Screenshot")
 
