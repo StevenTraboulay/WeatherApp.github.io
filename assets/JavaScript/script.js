@@ -74,7 +74,7 @@ function searchWeather(searchValue) {
 //forecast func
 function getForecast(searchValue) {
   fetch(
-    "http://api.openweathermap.org/data/2.5/weather?q=" + searchValue + "&appid=f9536bc7a9491fe897bd179cb356d42a&units=metric")
+    "http://api.openweathermap.org/data/2.5/forecast?q=" + searchValue + "&appid=f9536bc7a9491fe897bd179cb356d42a&units=metric")
     .then(function (response) {
 
       return response.json();
@@ -92,7 +92,7 @@ function getForecast(searchValue) {
         
         //forecasts at 3pm
 
-        if (data.list[i].dt_txt.indexOf("15:00:00)") !== -1) {
+        if (data.list[i].dt_txt.indexOf("15:00:00") !== -1) {
 
           //html for card
           var colEl = document.createElement("div");
@@ -117,7 +117,7 @@ function getForecast(searchValue) {
           var imgEl = document.createElement("img");
           imgEl.setAttribute(
             "src",
-            "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png"
+            "http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png"
           );
           var p1El = document.createElement("p");
           p1El.classList.add("card-text");
@@ -126,7 +126,8 @@ function getForecast(searchValue) {
           p2El.classList.add("card-text");
           p2El.textContent = "Humidity: " + data.list[i].main.humidity + "%";
 
-          colEl.appendChild(cardEl);
+          //merging
+          colEl.appendChild(cardEl)
           bodyEl.appendChild(titleEl);
           bodyEl.appendChild(imgEl);
           bodyEl.appendChild(windEl);
@@ -142,7 +143,7 @@ function getForecast(searchValue) {
 
 function getUVIndex(lat, lon) {
   fetch(
-    "http://api.openweathermap.org/data/2.5/weather?lat=" +
+    "http://api.openweathermap.org/data/2.5/uvi?lat=" +
       lat +
       "&lon=" +
       lon +

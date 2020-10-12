@@ -25,6 +25,7 @@ process
 5) create forecast loops and hourly checks
 6) checking on validiy of cards
 7) function for calling 5 day forecast is bugging and not pulling in length, debugging
+8) fixed the issue - in the API its not clear which ones to use HOWEVER for UV get the UV API for forecast get the FORECAST API and gen weather get the WEATHER API
 
 
 
@@ -35,3 +36,17 @@ keys and info
 API key f9536bc7a9491fe897bd179cb356d42a
 
 full fetch API: fetch("api.openweathermap.org/data/2.5/weather?q=" + searchValue + "&appid=f9536bc7a9491fe897bd179cb356d42a&units=metric"
+
+
+-----
+screenshot
+-----
+
+i was asked to add a screenshot but everytime i tried it seems to break link
+
+if suggestions could be provided i would apprciate it. 
+
+screenshot added to images folder
+
+![Alt text](/assets/images/weatherscreenshot.png "Screenshot")
+
