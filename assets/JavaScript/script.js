@@ -36,7 +36,7 @@ function searchWeather(searchValue) {
     todayEl.textContent = " ";
 
     //current weather content
-    var titleEl = document.createElement("h3");
+    var titleEl = document.createElement("h3")
     titleEl.classList.add("card-title");
     titleEl.textContent =
       data.name + "(" + new Date().toLocaleDateString() + ")";
@@ -58,7 +58,7 @@ function searchWeather(searchValue) {
       "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png"
     );
     //appending info to cards
-    titleEl.appendChild(imgEl);
+    titleEl.appendChild(imgEl)
     cardBodyEl.appendChild(titleEl);
     cardBodyEl.appendChild(tempEl);
     cardBodyEl.appendChild(humidEl);
@@ -68,31 +68,32 @@ function searchWeather(searchValue) {
 
     getForecast(searchValue);
     getUVIndex(data.coord.lat, data.coord.lon);
-  });
+  })
 }
 
 //forecast func
 function getForecast(searchValue) {
   fetch(
-    "http://api.openweathermap.org/data/2.5/weather?q=" +
-      searchValue +
-      "&appid=f9536bc7a9491fe897bd179cb356d42a&units=metric"
-  )
+    "http://api.openweathermap.org/data/2.5/weather?q=" + searchValue + "&appid=f9536bc7a9491fe897bd179cb356d42a&units=metric")
     .then(function (response) {
+
       return response.json();
     })
-    .then(function (data) {
-      console.log(data);
-      var forecastEl = document.querySelector("#forecast");
-      forecastEl.innerHTML = '<h4 class="mt">5-day Forecast:</h4>';
+    .then(function(data) {
+      //console.log(data)
+      var forecastEl = document.querySelector("#forecasts");
+      forecastEl.innerHTML = "<h4 class=\"mt-3\">5-Day Forecast:</h4>";
       forecastRowEl = document.createElement("div");
-      forecastRowEl.className = '"row"';
+      forecastRowEl.className = "\"row\"";
 
       //loop over all forecasts in xxxx hours
 
       for (var i = 0; i < data.list.length; i++) {
+        
         //forecasts at 3pm
+
         if (data.list[i].dt_txt.indexOf("15:00:00)") !== -1) {
+
           //html for card
           var colEl = document.createElement("div");
           colEl.classList.add("col-md-2");

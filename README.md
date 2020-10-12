@@ -24,6 +24,8 @@ process
 4) keys seem okay trying again
 5) create forecast loops and hourly checks
 6) checking on validiy of cards
+7) function for calling 5 day forecast is bugging and not pulling in length, debugging
+
 
 
 ---------
