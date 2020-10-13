@@ -27,6 +27,15 @@ process
 7) function for calling 5 day forecast is bugging and not pulling in length, debugging
 8) fixed the issue - in the API its not clear which ones to use HOWEVER for UV get the UV API for forecast get the FORECAST API and gen weather get the WEATHER API
 
+---------------
+IMPORTANT
+---------------
+
+was told AFTERWARDS that the HTTP would not work had to change to HTTPS for the API call.  
+
+odd as this isn't discussed in either the lessons OR the API documentation had to hear it from instructor off the cuff in class
+
+
 
 
 ---------
