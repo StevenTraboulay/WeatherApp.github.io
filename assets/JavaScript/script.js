@@ -24,7 +24,7 @@ function makeRow(searchValue) {
 //API call/key for search
 function searchWeather(searchValue) {
   fetch(
-    "http://api.openweathermap.org/data/2.5/weather?q=" +
+    "https://api.openweathermap.org/data/2.5/weather?q=" +
       searchValue +
       "&appid=f9536bc7a9491fe897bd179cb356d42a&units=metric"
   ).then(function (response) {
@@ -55,7 +55,7 @@ function searchWeather(searchValue) {
     var imgEl = document.createElement("img");
     imgEl.setAttribute(
       "src",
-      "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png"
+      "https://openweathermap.org/img/w/" + data.weather[0].icon + ".png"
     );
     //appending info to cards
     titleEl.appendChild(imgEl)
@@ -74,7 +74,7 @@ function searchWeather(searchValue) {
 //forecast func
 function getForecast(searchValue) {
   fetch(
-    "http://api.openweathermap.org/data/2.5/forecast?q=" + searchValue + "&appid=f9536bc7a9491fe897bd179cb356d42a&units=metric")
+    "https://api.openweathermap.org/data/2.5/forecast?q=" + searchValue + "&appid=f9536bc7a9491fe897bd179cb356d42a&units=metric")
     .then(function (response) {
 
       return response.json();
@@ -117,7 +117,7 @@ function getForecast(searchValue) {
           var imgEl = document.createElement("img");
           imgEl.setAttribute(
             "src",
-            "http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png"
+            "https://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png"
           );
           var p1El = document.createElement("p");
           p1El.classList.add("card-text");
@@ -143,7 +143,7 @@ function getForecast(searchValue) {
 
 function getUVIndex(lat, lon) {
   fetch(
-    "http://api.openweathermap.org/data/2.5/uvi?lat=" +
+    "https://api.openweathermap.org/data/2.5/uvi?lat=" +
       lat +
       "&lon=" +
       lon +
